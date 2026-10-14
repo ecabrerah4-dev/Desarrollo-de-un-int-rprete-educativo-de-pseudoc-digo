@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intérprete educativo de pseudocódigo</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header class="encabezado">
+    <div class="marca"></div>
+    <div>
+      <h1>Desarrollo de un intérprete educativo de pseudocódigo </h1>
+      <p>Aprende algoritmos paso a paso</p>
+    </div>
+    <span class="etiqueta">Pseudocódigo ES</span>
+  </header>
+
+  <main class="contenedor">
+    <section class="panel editor-panel">
+      <div class="panel-titulo">
+        <div>
+          <h2>Editor de código</h2>
+          <p>Escribe tu algoritmo en el lenguaje definido.</p>
+        </div>
+        <button id="ejemploBtn" class="boton secundario">Cargar ejemplo</button>
+      </div>
+      <label for="codigo">Código fuente</label>
+      <textarea id="codigo" spellcheck="false" aria-label="Editor de pseudocódigo">Algoritmo ejemplo
+Definir edad Como Entero
+edad = 18
+Si edad >= 18 Entonces
+    Escribir "Es mayor de edad"
+SiNo
+    Escribir "Es menor de edad"
+FinSi
+FinAlgoritmo</textarea>
+      <label for="entradas">Datos de entrada (uno por línea, en orden de Leer)</label>
+      <textarea id="entradas" class="entradas" placeholder="Ejemplo:&#10;a: 5&#10;b: 3"></textarea>
+      <div class="acciones">
+        <button id="ejecutarBtn" class="boton principal">▶ Analizar y ejecutar</button>
+        <button id="limpiarBtn" class="boton secundario">Limpiar resultados</button>
+      </div>
+      <p class="nota">cada variable con <code>Definir</code> antes de utilizarla.</p>
+    </section>
+
+    <section class="panel resultado-panel">
+      <div class="panel-titulo">
+        <div>
+          <h2>Consola de resultados</h2>
+          <p>Estado, salida y variables.</p>
+        </div>
+      </div>
+      <div id="estado" class="estado neutral">Listo para analizar.</div>
+      <h3>Salida del programa</h3>
+      <pre id="salida" class="consola">Los resultados aparecerán aquí.</pre>
+      <h3>Variables al finalizar</h3>
+      <div id="variables" class="tabla-vacia">Todavía no hay variables.</div>
+      <h3>Tokens identificados</h3>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Valor</th>
+              <th>Línea</th>
+              <th>Columna</th>
+            </tr>
+          </thead>
+          <tbody id="tokens">
+            <tr>
+              <td colspan="4">Ejecuta un programa para ver sus tokens.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel ayuda">
+      <h2>Sintaxis rápida</h2>
+      <div class="ayuda-grid">
+        <div><code>Algoritmo nombre</code><span>Inicio del programa</span></div>
+        <div><code>Definir edad Como Entero</code><span>Declaración de variable</span></div>
+        <div><code>edad = 20</code><span>Asignación</span></div>
+        <div><code>Leer edad</code><span>Entrada de datos</span></div>
+        <div><code>Escribir edad</code><span>Salida de datos</span></div>
+        <div><code>Si edad &gt;= 18 Entonces ... FinSi</code><span>Condicional</span></div>
+        <div><code>FinAlgoritmo</code><span>Fin del programa</span></div>
+      </div>
+    </section>
+  </main>
+  <script src="/script.js"></script>
+</body>
+
+</html>
