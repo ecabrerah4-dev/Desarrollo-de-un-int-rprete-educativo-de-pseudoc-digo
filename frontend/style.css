@@ -18,6 +18,7 @@
 }
 
 body {
+    width: 100%;
     min-height: 100vh;
     margin: 0;
     background: linear-gradient(
@@ -163,10 +164,6 @@ textarea:focus {
     height: 330px;
 }
 
-.entradas {
-    height: 76px;
-}
-
 .acciones {
     margin-top: 17px;
     display: flex;
@@ -236,6 +233,30 @@ code {
     background: #241a32;
     color: #d9aaff;
     font-family: "Cascadia Code", Consolas, monospace;
+}
+
+.swal2-popup {
+    margin: auto;
+    border: 1px solid #3c2b53;
+    border-radius: 14px;
+    background: #171923;
+    color: #f3f4fb;
+}
+
+.swal2-container {
+    display: grid;
+    place-items: center;
+}
+
+.swal2-title,
+.swal2-html-container {
+    color: #f3f4fb;
+}
+
+.swal2-input {
+    border-color: #353744;
+    background: #0b0d13;
+    color: #dfe5f5;
 }
 
 .estado {
