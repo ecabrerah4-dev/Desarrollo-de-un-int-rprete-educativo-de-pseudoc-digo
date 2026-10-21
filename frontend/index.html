@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intérprete educativo de pseudocódigo</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -37,13 +37,12 @@ SiNo
     Escribir "Es menor de edad"
 FinSi
 FinAlgoritmo</textarea>
-      <label for="entradas">Datos de entrada (uno por línea, en orden de Leer)</label>
-      <textarea id="entradas" class="entradas" placeholder="Ejemplo:&#10;a: 5&#10;b: 3"></textarea>
       <div class="acciones">
         <button id="ejecutarBtn" class="boton principal">▶ Analizar y ejecutar</button>
         <button id="limpiarBtn" class="boton secundario">Limpiar resultados</button>
       </div>
-      <p class="nota">cada variable con <code>Definir</code> antes de utilizarla.</p>
+      <p class="nota">Cada variable debe declararse con <code>Definir</code>. <code>Leer</code> solicitará su dato
+        durante la ejecución.</p>
     </section>
 
     <section class="panel resultado-panel">
@@ -91,7 +90,8 @@ FinAlgoritmo</textarea>
       </div>
     </section>
   </main>
-  <script src="/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
